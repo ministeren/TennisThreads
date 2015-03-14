@@ -1,5 +1,6 @@
 
 public class Sleeper {
+	
 	public static double sleepInterruptable( double sekunder ) {
 		long start = System.currentTimeMillis();
     try {
@@ -24,6 +25,7 @@ public class Sleeper {
   public static double sleepRandom( double sekunder ) {
     return sleep( sekunder * Math.random() );
   }
+  
   public static void wait( Object obj ) {
     try {
       obj.wait();
@@ -31,4 +33,5 @@ public class Sleeper {
       // ignore
     }
   }
+  
 }
