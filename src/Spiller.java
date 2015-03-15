@@ -38,7 +38,7 @@ public class Spiller implements Runnable {
 
 			} else {
 				try {
-					Thread.sleep(5);
+					Thread.sleep(50);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -57,6 +57,14 @@ public class Spiller implements Runnable {
 	
 	public synchronized void setAlive(boolean set){
 		alive=set;
+	}
+	
+	public synchronized String hasBall(){
+		String output=" ";
+		if(ball){
+			output="+";
+		}
+		return output;
 	}
 
 	public synchronized void modtagBold(){
@@ -100,17 +108,22 @@ public class Spiller implements Runnable {
 	}
 	
 	public synchronized int getPoint(){
+		return point;
+		
+	}
+	
+public synchronized String printPoint(){
 		
 		if(point==0){
-			return 00;
+			return "00";
 		} else if(point==1){
-			return 15;
+			return "15";
 		} else if(point==2){
-			return 30;
+			return "30";
 		} else if(point==3){
-			return 40;
+			return "40";
 		} else {
-			return point;
+			return " ";
 		}
 	}
 
