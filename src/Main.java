@@ -3,7 +3,8 @@ public class Main {
 
 	public static void main(String[] args) throws InterruptedException{
 		// TODO Auto-generated method stub
-
+		String test = "12345";
+		System.out.println(test.toLowerCase());
 		Spiller spiller1 = new Spiller("Borg", true);
 		Spiller spiller2 = new Spiller("McEnroe", false);
 
